@@ -23,8 +23,7 @@ def seq_range(seq_idx):
 
     return start, end, sync_list
 
-seq_idx = "20170113_142649"
-sandbox_path = "c:/Users/DONGWON/Desktop/20170113 Experiment/server/%s/still/" % (seq_idx)
+seq_idx = "20161204_233533"
 start_frame=0;
 end_frame=0;
 mode = 1
@@ -41,7 +40,7 @@ while(True):
     # # proposed depth
     img_stack = []
     for i in [0,1,2,3]:
-        # filename = "d:/Sequences/20170106 3D Recon Based MVDG Test/proposed/%s/view%d_%d.png" % (seq_idx, i, frame_idx)
+        filename = "d:/Sequences/20170106 3D Recon Based MVDG Test/proposed/%s/view%d_%d.png" % (seq_idx, i, frame_idx)
         img = cv2.imread(filename,0)
         equ = cv2.equalizeHist(img)
         res = cv2.resize(equ, (0,0), fx=0.25, fy = 0.25)
